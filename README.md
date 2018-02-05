@@ -1,7 +1,8 @@
-# Codeigniter3-Starter
+# Weather App
 
-1-composer update
+to deploy this site you need composer php
+
+1-composer install
 2- create "sessions" folder inside application
-3- change permission to applications/logs
-4- give server user ownershipt of /logs and /sessions folders
-5 create database 'test' user: test, pass: test
+3- give server user ownership of  /sessions folder
+4- import sql database weatherdb.sql
