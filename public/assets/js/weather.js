@@ -98,14 +98,16 @@ var placeSearch, autocomplete;
 
 function show_weather(w_data) {
 	 if(w_data){
+	 	var weather = w_data.weather[0].main;
+
 	 	$('.city_name').html(w_data.name);
+	 	$('.w_description').html(weather);
 	 	$('.temp').html(w_data.main.temp);
 	 	$('.temp_max').html(w_data.main.temp_max);
 	 	$('.temp_min').html(w_data.main.temp_min);
 	 	$('.press').html(w_data.main.pressure);
 	 	$('.humidity').html(w_data.main.humidity);
 	 	$('.wind_speed').html(w_data.wind.speed);
-	 	var weather = w_data.weather[0].main;
 	 	$('.w_icon i').removeClass('');
 	 	console.log('weather:' +weather);
 	 	console.log(wicons);

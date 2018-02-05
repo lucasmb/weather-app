@@ -41,7 +41,7 @@
                         <div>&nbsp;</div>
                     </div>
                     <div class="col-md-6 mt-3">
-                         <span class="">Sunny</span>
+                         <span class="w_description"></span>
                         <div id="w_icon" class="w_icon">
                             <i class="wi wi-day-sunny"></i>
                         </div>
