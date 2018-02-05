@@ -25,15 +25,6 @@ var lat, lng;
 var appId = 'baf40891cc08ca46649faffdb68dba38';
 var placeSearch, autocomplete;
 
-	var componentForm = {
-        street_number: 'short_name',
-        route: 'long_name',
-        locality: 'long_name',
-        administrative_area_level_1: 'short_name',
-        country: 'long_name',
-        postal_code: 'short_name'
-    };
-
     function initSearchAutocomplete() {
        autocomplete = new google.maps.places.Autocomplete(
           (document.getElementById('autocomplete')),
@@ -79,6 +70,7 @@ var placeSearch, autocomplete;
 	}
 
 	function getWeather(lat,lng,appId, save) {
+		$.LoadingOverlay("show");
 	    $.ajax({
 			   	url: "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lng+"&units=metric"+"&appid="+appId,  
 			    type: "GET",
@@ -95,7 +87,11 @@ var placeSearch, autocomplete;
 			})
 			.fail(function() {
 			  alert( "error" );
-			})
+			}).always(function(){
+				// Show full page LoadingOverlay
+				$('#main_info').show();
+			    $.LoadingOverlay("hide");
+			});
 
 	}
 
@@ -141,8 +137,8 @@ function show_weather(w_data) {
 		marker.setMap(map);
 	}
 
-function save_data(w_data) {
-	w_data.google_coord = {lat: lat, lng: lng};
+	function save_data(w_data) {
+		w_data.google_coord = {lat: lat, lng: lng};
 	   $.ajax({
 			   	url: "/site/save_search_data",  
 			    type: "POST",
@@ -150,7 +146,7 @@ function save_data(w_data) {
 			   	data: {w_data : JSON.stringify(w_data)}
 	  		 })
 			.done(function(data) {
-			  alert( "data saved" );
+			  console.log( "data saved" );
 			  load_previous();
 			})
 			.fail(function() {
@@ -159,7 +155,8 @@ function save_data(w_data) {
 			
 	}
 
-function load_previous() {
+	function load_previous() {
+	$(".table_content").LoadingOverlay("show");
 	    $.ajax({
 			   	url: "/site/get_previous_search",  
 			    type: "POST",
@@ -171,8 +168,10 @@ function load_previous() {
 			})
 			.fail(function() {
 			  console.log( "no previous" );
-			})
-}
+			}).always(function() {
+				$(".table_content").LoadingOverlay("hide", true);
+			});
+	}
 
 	function remove_search(search_id, tr) {
 		 $.ajax({
@@ -189,6 +188,8 @@ function load_previous() {
 			})
 	}
 
+	
+
 //page ready;
 $(function(){
     initSearchAutocomplete();
@@ -204,11 +205,17 @@ $(function(){
 	$( "tbody" ).on( "click", ".get_w", function() {
 	    p_lat = $(this).data('lat');
 	    p_lng = $(this).data('lng');
+	    lat = p_lat;
+	    lng = p_lng;
 	    getWeather(p_lat, p_lng, appId, false);
 	});
 
-$(".get_geo").on( "click", function() {
-	getLocation();
-});
+	$(".get_geo").on( "click", function() {
+		getLocation();
+	});
+
+	$("#full_forecast").on( "click", function() {
+		$(location).attr("href", "/forecast/full/"+lat+"/"+lng);
+	});
 
 });

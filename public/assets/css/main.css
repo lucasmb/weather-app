@@ -1,15 +1,8 @@
-/*
- * Base structure
- */
 
-/* Move down content because we have a fixed navbar that is 50px tall */
+/* Move down content for nav */
 body {
   padding-top: 50px;
 }
-
-/*
- * Typography
- */
 
 h1 {
   margin-bottom: 20px;
@@ -59,17 +52,6 @@ h1 {
  * Dashboard
  */
 
- /* Placeholders */
-.placeholders {
-  padding-bottom: 3rem;
-}
-
-.placeholder img {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-
 /*search*/
 #custom-search-input{
     padding: 3px;
@@ -103,8 +85,7 @@ h1 {
     font-size: 23px;
 }
 
-/*weat*/
-
+/*weather*/
    .weather
     {
         display: flex;
@@ -119,7 +100,7 @@ h1 {
             flex-flow: row wrap;
             color: white;
             padding: 20px;
-            text-shadow: 1px 1px #F68D2E;
+            text-shadow: 2px 1px #220000;
         }
 
             .weather .current .info
@@ -158,28 +139,28 @@ h1 {
             flex-flow: row nowrap;
         }
 
-            .weather .future .day
-            {
-                flex-grow: 1;
-                text-align: center;
-                cursor: pointer;
-            }
+      .weather .future .day
+      {
+          flex-grow: 1;
+          text-align: center;
+          cursor: pointer;
+      }
 
-                .weather .future .day:hover
-                {
-                    color: #fff;
-                    background-color: #F68D2E;
-                }
+      .weather .future .day:hover
+      {
+          color: #fff;
+          background-color: #F68D2E;
+      }
 
-                .weather .future .day h3
-                {
-                    text-transform: uppercase;
-                }
+      .weather .future .day h3
+      {
+          text-transform: uppercase;
+      }
 
-                .weather .future .day p
-                {
-                    font-size: 28px;
-                }
+      .weather .future .day p
+      {
+          font-size: 28px;
+      }
 
 
 /*maps*/

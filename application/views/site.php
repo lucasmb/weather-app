@@ -25,11 +25,11 @@
 	</div>
 
 
-    <div class="row mt-3">
+    <div id="main_info" class="row mt-3" style="display:none">
         <div class="col-md-6 ">
             <div class="weather">
                 <div class="current">
-                    <div class="info">
+                    <div class="info col-md-5">
                         <div></div>
                         <div class="city_d"><small>CITY:</small> <span class="city_name"></div>
                         <div class="temp_d"><small>TEMP:</small><span class="temp"></span>&deg; <small>C</small></div>
@@ -40,15 +40,21 @@
                         <div class="wind_d"><small><small>WIND:</small></small> <span class="wind_speed"> </span>km/h</div>
                         <div>&nbsp;</div>
                     </div>
-                    <div id="w_icon" class="w_icon">
-                        <i class="wi wi-day-sunny"></i>
-                    
+                    <div class="col-md-6 mt-3">
+                         <span class="">Sunny</span>
+                        <div id="w_icon" class="w_icon">
+                            <i class="wi wi-day-sunny"></i>
+                        </div>
+                             <div class="mb-3 ml-auto">
+                            <button id="full_forecast" class="btn btn-secondary"> Full Forecast </button>
+                            </div>
                     </div>
+                   
                 </div>
-                <div class="future">
-                   <a href="/weather/full">Full Forecast</a>
-                </div>
+               
             </div>
+            <div class="row" >
+                  </div>
         </div>
          <div class="col-md-6 ">
             <div id="map">
@@ -57,24 +63,24 @@
     </div>
 
 <div class="row mt-3">
-    <h4>Previous Search</h4>
+    <h4>Previous Searches</h4>
 </div>
 <div class="row mt-3">
-<div class="col-md-6 ">
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">City name</th>
-      <th scope="col">Time</th>
-      <th scope="col">Actions</th>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
+<div class="table_content col-md-6 ">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">City name</th>
+          <th scope="col">Time</th>
+          <th scope="col">Actions</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
 
-  </tbody>
-</table> 
+      </tbody>
+    </table> 
 </div>
 </div>
 

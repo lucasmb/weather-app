@@ -2,18 +2,15 @@
     </div>
 </div>
 
+    <!-- Footer -->    
+    <!-- END Footer -->
  
     <!-- /#wrapper -->
 
         <!-- Apps Modal -->
         <!-- END Apps Modal -->
 
-
- 		<script src="/assets/js/core/jquery.min.js"></script>
-		
-    	<!-- Footer -->
         
-    	<!-- END Footer -->
 
         <!-- main js-->
 
@@ -23,11 +20,6 @@
 
 
         <script src="/assets/js/bootstrap.min.js"></script>
-
-        <script src="/assets/js/app.js"></script>
-
-        <!-- Page JS Plugins -->
-        <script src="/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
 
         <!-- Page JS -->
         <?php
@@ -43,6 +35,8 @@
          <!-- Google Maps Api -->
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsEzwixfOiLCXbPLkTMRWK2Djmn1s11V8&libraries=places"
         async defer></script>
+
+         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@1.5.4/src/loadingoverlay.min.js"></script>
 
     </body>
 </html>

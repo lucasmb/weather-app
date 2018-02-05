@@ -18,9 +18,10 @@
         </ul>
         
         <?if($auth_username): ?>
-        <div>
-        	 <span>Welcome</span> <a class="nav-link" href="#"><?=($auth_username)?></a>
-        </div>
+          <span class="navbar-text pr-2">
+            	 Welcome <?=($auth_username)?>  
+          </span>
+         <a href="/logout" class="btn btn-sm btn-danger"> Logout</a>
         <?endif;?>
       </div>
     </nav>
