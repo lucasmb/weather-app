@@ -1,0 +1,194 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+}
+
+/*
+ * Typography
+ */
+
+h1 {
+  margin-bottom: 20px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  top: 51px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  border-right: 1px solid #eee;
+}
+
+/* Sidebar navigation */
+.sidebar {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar .nav {
+  margin-bottom: 20px;
+}
+
+.sidebar .nav-item {
+  width: 100%;
+}
+
+.sidebar .nav-item + .nav-item {
+  margin-left: 0;
+}
+
+.sidebar .nav-link {
+  border-radius: 0;
+}
+
+/*
+ * Dashboard
+ */
+
+ /* Placeholders */
+.placeholders {
+  padding-bottom: 3rem;
+}
+
+.placeholder img {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+
+/*search*/
+#custom-search-input{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .fa-search{
+    font-size: 23px;
+}
+
+/*weat*/
+
+   .weather
+    {
+        display: flex;
+        flex-flow: column wrap;
+        box-shadow: 0px 1px 10px 0px #cfcfcf;
+        overflow: hidden;
+    }
+
+        .weather .current
+        {
+            display: flex;
+            flex-flow: row wrap;
+            color: white;
+            padding: 20px;
+            text-shadow: 1px 1px #F68D2E;
+        }
+
+            .weather .current .info
+            {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: space-around;
+                flex-grow: 2;
+            }
+
+                .weather .current .info .city
+                {
+                    font-size: 26px;
+                }
+
+                .weather .current .info .temp
+                {
+                    font-size: 56px;
+                }
+
+                .weather .current .info .wind
+                {
+                    font-size: 24px;
+                }
+
+            .weather .current .w_icon
+            {
+                text-align: center;
+                font-size: 64px;
+                flex-grow: 1;
+            }
+
+        .weather .future
+        {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+            .weather .future .day
+            {
+                flex-grow: 1;
+                text-align: center;
+                cursor: pointer;
+            }
+
+                .weather .future .day:hover
+                {
+                    color: #fff;
+                    background-color: #F68D2E;
+                }
+
+                .weather .future .day h3
+                {
+                    text-transform: uppercase;
+                }
+
+                .weather .future .day p
+                {
+                    font-size: 28px;
+                }
+
+
+/*maps*/
+html, body {
+  height: 100%;
+}
+
+#map {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}

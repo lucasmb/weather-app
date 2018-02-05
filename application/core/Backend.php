@@ -4,6 +4,8 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
 class Backend extends MY_Controller {
 
     private $errors = array();
+    public $lat;
+    public $lng;
 
     public function __construct() 
     {
@@ -15,7 +17,7 @@ class Backend extends MY_Controller {
 
 		$this->lang->load('auth');
 
-        echo 'Backend';
+       // echo 'Backend';
         	//vd($_SERVER);
 
 		if (!$this->ion_auth->logged_in())

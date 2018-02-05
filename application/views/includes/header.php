@@ -4,10 +4,10 @@
     <head>
         <meta charset="utf-8">
 
-        <title>OneUI - Admin Dashboard Template &amp; UI Framework</title>
+        <title>Weather App</title>
 
-        <meta name="description" content="OneUI - Admin Dashboard Template &amp; UI Framework created by pixelcave and published on Themeforest">
-        <meta name="author" content="pixelcave">
+        <meta name="description" content="Weather App - get weather info, simple and easy>
+        <meta name="author" content="lucas">
         <meta name="robots" content="noindex, nofollow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -36,12 +36,15 @@
         <!-- Web fonts -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
 
-        <!-- Bootstrap and OneUI CSS framework -->
+        <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-        <link rel="stylesheet" id="css-main" href="/assets/css/oneui.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/assets/css/main.css">
 
-        <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
-        <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
+        <link rel="stylesheet" href="https://cdn.bootcss.com/weather-icons/2.0.10/css/weather-icons.min.css">
+
         <!-- END Stylesheets -->
-    </head>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>    </head>
+
 	<body>
+

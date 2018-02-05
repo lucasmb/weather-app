@@ -3,6 +3,12 @@
 	"name": "weather app",
 	"type": "app",
 	"homepage": "https://w.com",
-	"license": "MIT"
+	"license": "MIT",
+	"config": {
+        "vendor-dir": "vendor"
+    },
+	"require": {
+		    "guzzlehttp/guzzle": "~6.0"
+	}
 	
 }

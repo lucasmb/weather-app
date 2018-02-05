@@ -57,16 +57,18 @@ class Render {
         die();
     }
 
-    public function page($page = "", $data = array(), $setup=false, $mobile="")
+    public function page($page = "", $data = array(), $returnHTML=FALSE)
     {
+        $view_html = '';
         $data['page'] = $this->get_page();
+
         $data = array_merge($this->variables, $data);
         //$this->_ci->load->view("includes/header", $data);
-        $this->ci->load->view("includes/header", $data);
-        $this->ci->load->view("includes/menu", $data);
+        $this->ci->load->view("includes/header", $data, $returnHTML);
+        $this->ci->load->view("includes/menu", $data, $returnHTML);
 
         //main page
-        $this->ci->load->view($page, $data);
+        $view_html = $this->ci->load->view($page, $data, $returnHTML);
 
         $js_path = FCPATH.'assets/js/pages/'.$page.'.js' ;
              
@@ -74,7 +76,13 @@ class Render {
                  $this->add_js('pages/'.$page.'.js');
                 }
 
-        $this->ci->load->view('includes/footer', $data);
+        $this->ci->load->view('includes/footer', $data, $returnHTML);
+
+        // This will return html if 3rd argument being true
+        if ($returnHTML)
+        {
+            return $view_html;
+        }
 
     }
 
